@@ -75,11 +75,35 @@ calli.on("message", async message => {
 \`${prefix}show anti\` - \`${prefix}settings\`
 ━────╮🛠╭────━
 **Links**
-[Add Bot]() - [Invite]()
+[Add Bot](https://discord.com/api/oauth2/authorize?client_id=${calli.user.id}&permissions=8&scope=bot) - [Support]()
       `);
     message.channel.send(help);
   }
 });
+
+///////////////////////////////////////////////////////////////////////////////
+calli.on("message", async message => {
+  if (message.content.startsWith(prefix + "show anti")) {
+    let showanti = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setImage(calliImage)
+      .setThumbnail(message.member.user.displayAvatarURL({ dynamic: true }))
+      .setDescription(`
+━────╮🛠╭────━
+**Security**
+\`${prefix}anti ban {number}\`
+\`${prefix}anti kick {number}\`
+\`${prefix}anti channelD {number}\`
+\`${prefix}anti channelC {number}\`
+\`${prefix}anti roleD {number}\`
+\`${prefix}anti roleC {number}\`
+\`${prefix}anti bot {on/off}\`
+━────╮🛠╭────━
+      `);
+    message.channel.send(showanti);
+  }
+});
+
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("message", async message => {
   if (message.content.startsWith("Tag Bot is here")) {
