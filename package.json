@@ -1,42 +1,41 @@
-
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
-  "version": "6.0.0",
-  "description": "A simple Node app built on Express, instantly up and running.",
+{
+  "name": "Calli",
+  "version": "2.1.0",
+  "description": "Calli",
   "main": "calli.js",
   "scripts": {
     "start": "node calli.js"
   },
   "dependencies": {
+    "discord.js": "^12.4.0",
+    "http": "^0.0.0",
     "express": "^4.17.1",
-    "discord.js": "^12.5.1",
+    "ytdl-core": "^4.1.3",
     "canvas": "^2.6.1",
     "hh-mm-ss": "^1.2.0",
+    "youtube-info": "^1.3.2",
+    "simple-youtube-api": "^5.2.1",
     "moment": "^2.29.1",
     "fs": "^0.0.2",
+    "util": "^0.12.3",
+    "gif-search": "^2.0.1",
+    "node-opus": "^0.3.3",
+    "ms": "^2.1.3",
     "jimp": "^0.16.1",
-    "math-expression-evaluator": "^1.3.7",
+    "math-expression-evaluator": "^1.3.6",
     "snekfetch": "^4.0.4",
     "guild": "^1.2.2",
-    "dateformat": "^4.5.0",
-    "table": "^6.0.7",
+    "dateformat": "^4.3.1",
+    "hastebin-gen": "^2.0.5",
+    "get-youtube-id": "^1.0.1",
+    "pretty-ms": "^7.0.1",
+    "table": "^6.0.4",
     "node-cmd": "^4.0.0",
-    "gif-search": "^2.0.1",
-    "node-fetch": "^2.6.1",
-    "fs-extra": "^9.0.1"
+    "enmap": "^5.7.3",
+    "@suldashi/node-opus": "^0.3.5",
+    "quick.db": "^7.1.2"
   },
   "engines": {
     "node": "12.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
-  },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  }
 }
