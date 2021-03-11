@@ -47,7 +47,7 @@ const callitrue = "";
 const callifalse = "";
 const calliwarn = "";
 ///////////////////////////////////////////////////////////////////////////////
-calli.login("ODE5MTM1MTY4NDI5MjkzNTc5.YEiNEg.6QN33QWywzgYvq2zWK6znVU4gHg");
+calli.login("");
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("ready", () => {
   console.log(`${calli.user.tag}`);
