@@ -103,16 +103,6 @@ calli.on("message", async message => {
     message.channel.send(showanti);
   }
 });
-
-///////////////////////////////////////////////////////////////////////////////
-calli.on("message", async message => {
-  if (message.content.startsWith("Tag Bot is here")) {
-    let tag = new Discord.MessageEmbed()
-      .setColor(callicolor)
-      .setAuthor(`Secure Bot : ${prefix}help`);
-    message.channel.send(tag);
-  }
-});
 //////////////////////////////////////////////////////////////////////////////
 calli.on("message", msg => {
   if (msg.author.bot) return;
