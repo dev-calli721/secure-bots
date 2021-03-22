@@ -125,7 +125,7 @@ calli.on("message", msg => {
     msg.react(callifalse);
   }
 });
-///////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 calli.on("message", message => {
   var ms = require("ms");
 
@@ -410,6 +410,9 @@ calli.on("message", message => {
     if (message.author.id !== message.guild.ownerID)
       return message.channel.send("**Just Can Online Ownership**");
     if (message.content.startsWith(prefix + "anti ban")) {
+      let embed = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setDescription(`Change To ${config[message.guild.id].banLimit}`)
       if (!num)
         return message.channel.send(
           "**" + callifalse + "  Type A `Number` .**"
@@ -419,11 +422,12 @@ calli.on("message", message => {
           "**" + callifalse + "  Only Type A `Number` .**"
         );
       config[message.guild.id].banLimit = num;
-      message.channel.send(
-        `** <@${message.author.id}>,  Successfully changed the anti ban to ${config[message.guild.id].banLimit}** ${callitrue}`
-      );
+      message.channel.send(embed);
     }
     if (message.content.startsWith(prefix + "anti kick")) {
+        let embed = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setDescription(`Change To ${config[message.guild.id].kickLimits}`)
       if (!num)
         return message.channel.send(
           "**" + callifalse + "  Type A `Number` .**"
@@ -433,11 +437,12 @@ calli.on("message", message => {
           "**" + callifalse + "  Only Type A `Number` .**"
         );
       config[message.guild.id].kickLimits = num;
-      message.channel.send(
-        `**<@${message.author.id}>,  Successfully changed the anti kick to ${config[message.guild.id].kickLimits}** ${callitrue}`
-      );
+      message.channel.send(embed);
     }
-    if (message.content.startsWith(prefix + "anti roleC")) {
+        if (message.content.startsWith(prefix + "anti roleD")) {
+          let embed = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setDescription(`Change To ${config[message.guild.id].roleDelLimit}`)
       if (!num)
         return message.channel.send(
           "**" + callifalse + "  Type A `Number` .**"
@@ -447,11 +452,12 @@ calli.on("message", message => {
           "**" + callifalse + "  Only Type A `Number` .**"
         );
       config[message.guild.id].roleDelLimit = num;
-      message.channel.send(
-        `**<@${message.author.id}>,  Successfully changed the anti roleC to ${config[message.guild.id].roleDelLimit}** ${callitrue}`
-      );
+      message.channel.send(embed);
     }
-    if (message.content.startsWith(prefix + "anti roleD")) {
+    if (message.content.startsWith(prefix + "anti roleC")) {
+      let embed = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setDescription(`Change To ${config[message.guild.id].roleCrLimits}`)
       if (!num)
         return message.channel.send(
           "**" + callifalse + "  Type A `Number` .**"
@@ -461,11 +467,12 @@ calli.on("message", message => {
           "**" + callifalse + "  Only Type A `Number` .**"
         );
       config[message.guild.id].roleCrLimits = num;
-      message.channel.send(
-        `**<@${message.author.id}>,  Successfully changed the anti roleD to ${config[message.guild.id].roleCrLimits}** ${callitrue}`
-      );
+      message.channel.send(embed);
     }
-    if (message.content.startsWith(prefix + "anti channelC")) {
+    if (message.content.startsWith(prefix + "anti channelD")) {
+    let embed = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setDescription(`Change To ${config[message.guild.id].chaDelLimit}`)
       if (!num)
         return message.channel.send(
           "**" + callifalse + "  Type A `Number` .**"
@@ -475,11 +482,12 @@ calli.on("message", message => {
           "**" + callifalse + "  Only Type A `Number` .**"
         );
       config[message.guild.id].chaDelLimit = num;
-      message.channel.send(
-        `**<@${message.author.id}>,  Successfully changed the anti channelC to ${config[message.guild.id].chaDelLimit}** ${callitrue}`
-      );
+      message.channel.send(embed);
     }
-    if (message.content.startsWith(prefix + "anti channelD")) {
+    if (message.content.startsWith(prefix + "anti channelC")) {
+      let embed = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setDescription(`Change To ${config[message.guild.id].chaCrLimit}`)
       if (!num)
         return message.channel.send(
           "**" + callifalse + "  Type A `Number` .**"
@@ -489,11 +497,12 @@ calli.on("message", message => {
           "**" + callifalse + "  Only Type A `Number` .**"
         );
       config[message.guild.id].chaCrLimit = num;
-      message.channel.send(
-        `**<@${message.author.id}>,  Successfully changed the anti channelD to ${config[message.guild.id].chaCrLimit}** ${callitrue}`
-      );
+      message.channel.send(embed);
     }
     if (message.content.startsWith(prefix + "anti time")) {
+      let embed = new Discord.MessageEmbed()
+      .setColor(callicolor)
+      .setDescription(`Change To ${config[message.guild.id].time}`)
       if (!num)
         return message.channel.send(
           "**" + callifalse + "  Type A `Number` .**"
@@ -503,9 +512,7 @@ calli.on("message", message => {
           "**" + callifalse + "  Only Type A `Number` .**"
         );
       config[message.guild.id].time = num;
-      message.channel.send(
-        `** <@${message.author.id}>,  Successfully changed the anti time to ${config[message.guild.id].time}** ${callitrue}`
-      );
+      message.channel.send(embed);
     }
     fs.writeFile("./configg.json", JSON.stringify(config, null, 2), function(
       e
