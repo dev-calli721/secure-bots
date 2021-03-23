@@ -63,20 +63,29 @@ calli.on("message", async message => {
       .setImage(calliImage)
       .setThumbnail(message.member.user.displayAvatarURL({ dynamic: true }))
       .setDescription(`
-━────╮🛠╭────━
-**Info Command**
-\`${prefix}botinfo\` - \`${prefix}userinfo\`
-\`${prefix}serverinfo\` - \`${prefix}ping\`
-━────╮🛠╭────━
-**Moderation Command**
-\`${prefix}lock\` - \`${prefix}unlock\` - \`${prefix}ban\` - \`${prefix}kick\`
-━────╮🛠╭────━
-**Security Command**
-\`${prefix}show anti\` - \`${prefix}settings\`
-━────╮🛠╭────━
-**Links**
-[Add Bot](https://discord.com/api/oauth2/authorize?client_id=${calli.user.id}&permissions=8&scope=bot) - [Support]()
-      `);
+**Info Commands**
+`s!botinfo`
+`s!userinfo`
+`s!serverinfo`
+`s!invite`
+**Moderation Commands**
+`s!lock`
+`s!unlock`
+`s!ban :` **@User**
+`s!kick :` **@User**
+`s!unban :` **Id/all**
+**Security Number**
+`s!anti kick:` **Number**
+`s!anti ban:` **Number**
+`s!anti channelD:` **Number**
+`s!anti channelC:` **Number**
+`s!anti roleD:` **Number**
+`s!anti roleC:` **Number**
+`s!anti time:` **Number**
+**Security On/Off**
+`s!anti bot:` **on-off**
+**Security**
+`s!settings`
     message.channel.send(help);
   }
 });
